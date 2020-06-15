@@ -1,0 +1,13 @@
+6.15
+=======================
+1. 解决启动bug
+发现了8.5版本的tomcat有个属性 secretRequired需要给设置值：
+<Connector port="8009" protocol="AJP/1.3" redirectPort="8443" />
+设置成""就可以了，也就是下面的设置结果：
+<Connector port="8009" protocol="AJP/1.3" redirectPort="8443" secretRequired="" />
+
+2. 解决中文乱码bug
+
+3. 启动运行
+入口：org.apache.catalina.startup.Bootstrap
+tomcat examples: http://localhost:8080/examples/
