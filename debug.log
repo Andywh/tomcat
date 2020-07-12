@@ -11,3 +11,9 @@
 3. 启动运行
 入口：org.apache.catalina.startup.Bootstrap
 tomcat examples: http://localhost:8080/examples/
+
+4. 在 webConfig() 代码之下添加 context.add *** 就可以访问首页
+webConfig();
+
+context.addServletContainerInitializer(new JasperInitializer(), null);
+
